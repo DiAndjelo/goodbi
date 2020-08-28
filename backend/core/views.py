@@ -11,7 +11,7 @@ class PassengerListView(ListView):
     model = Passenger
 
     def get_queryset(self):
-        qs = Passenger.objects.filter(age__gte=18).order_by('age')[:10]
+        qs = Passenger.objects.filter(age__gte=18, survived=True).order_by('age')[:10]
         return qs
 
 
