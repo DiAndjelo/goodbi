@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passengers</title>
+</head>
+<body>
+<table border="1">
+    <caption><h1>Passenger table</h1></caption>
+    <tr>
+        <th>Survived</th>
+        <th>PClass</th>
+        <th>Name</th>
+        <th>Sex</th>
+        <th>Age</th>
+        <th>SibSp</th>
+        <th>Parch</th>
+        <th>Ticket</th>
+        <th>Fare</th>
+        <th>Cabin</th>
+        <th>Embarked</th>
+    </tr>
+    {% for passenger in object_list %}
+        <tr>
+            <td>{{ passenger.survived }}</td>
+            <td>{{ passenger.pclass }}</td>
+            <td>{{ passenger.name }}</td>
+            <td>{{ passenger.sex }}</td>
+            <td>{{ passenger.age }}</td>
+            <td>{{ passenger.sib_sp }}</td>
+            <td>{{ passenger.parch }}</td>
+            <td>{{ passenger.ticket }}</td>
+            <td>{{ passenger.fare }}</td>
+            <td>{{ passenger.cabin }}</td>
+            <td>{{ passenger.embarked }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</ul>
+</body>
+</html>
